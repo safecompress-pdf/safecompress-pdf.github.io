@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy — SafeCompress PDF</title>
+<style>body{font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:32px 20px;line-height:1.6} a{color:#2563eb}</style>
+</head>
+<body>
+<h1>Privacy Policy — SafeCompress PDF</h1>
+<p class="small">Last updated: 2026-08-28</p>
+<h2>Overview</h2>
+<p>SafeCompress PDF compresses PDFs locally in your browser. Files are processed on your device and never uploaded.</p>
+<h2>What We Collect</h2>
+<p><strong>Nothing.</strong> No personal data, file content, or analytics collected.</p>
+<h2>How Processing Works</h2>
+<ol>
+<li>File read into browser memory</li>
+<li>Pages rendered locally with bundled pdf.js</li>
+<li>New PDF created with pdf-lib</li>
+<li>Download offered — no file leaves browser</li>
+</ol>
+<p>No network requests during compression (verified: manifest permissions [] and no fetch/XHR in source, checked 2026-08-28).</p>
+<h2>Permissions</h2>
+<p>No Chrome permissions, no host permissions — verifiable in <code>manifest.json</code>: <code>"permissions": []</code>, <code>"host_permissions": []</code>. Cannot access history, tabs, websites, cookies.</p>
+<h2>Local Storage</h2>
+<p>Only <code>localStorage safecompress_log</code> (filename, sizes) and theme preference, on-device only, cleared on uninstall, exportable TXT/CSV, clearable via button.</p>
+<h2>Libraries</h2>
+<p>Bundled locally: pdf.js, pdf-lib — loaded from extension package, not external servers. Exact versions require verification.</p>
+<h2>Offline</h2>
+<p>Works offline after install — libraries bundled, but real-browser offline test pending; claim qualified as “No server upload code found on 2026-08-28”.</p>
+<h2>Limitations</h2>
+<p>Do not claim 100% secure/private. Security depends on device/browser.</p>
+<p><a href="index.html">Home</a> · <a href="help.html">Help</a></p>
+</body>
+</html>
