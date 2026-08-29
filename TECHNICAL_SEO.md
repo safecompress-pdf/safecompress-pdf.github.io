@@ -1,0 +1,12 @@
+# Technical SEO Checklist
+- **robots.txt** – allows all. Ensure no disallow directives.
+- **sitemap.xml** – updated with new URLs, changefreq set appropriately.
+- **Canonical tags** – present on index and subpages.
+- **Meta robots** – none specified; consider `index, follow` on all content pages.
+- **NoDuplicate Content** – verify that localized pages have unique hreflang but distinct meta descriptions.
+- **Page Speed** – 65‑70 PageSpeed score. Compress og-image.png and reduce CSS size.<br>
+- **Image Alt Text** – add descriptive alt attributes for hero images.
+- **Structured Data** – validate `SoftwareApplication`, `FAQPage`, `HowTo` in each relevant page using Rich Results Test.
+- **Accessibility** – ensure ARIA labels on buttons, sufficient color contrast.
+- **Core Web Vitals** – focus on LCP ≤ 2.5s; consider lazy loading optional scripts.
+- **Security Headers** – CSP set to self only.

@@ -8,6 +8,16 @@
 </head>
 <body>
 <h1>FAQ</h1>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {"@type":"Question","name":"Is my PDF uploaded?","acceptedAnswer":{"@type":"Answer","text":"No — local browser processing, no uploads, no host permissions."}},
+  {"@type":"Question","name":"Does it collect data?","acceptedAnswer":{"@type":"Answer","text":"No — only localStorage log (filename/sizes) on device."}}
+ ]
+}
+</script>
 <h3>Is my PDF uploaded?</h3><p>No — local browser processing, no uploads, no host permissions.</p>
 <h3>Does it collect data?</h3><p>No — only localStorage log (filename/sizes) on device.</p>
 <h3>Works offline?</h3><p>Qualified: No server upload code found 2026-08-28, bundled libs — real offline test pending.</p>
