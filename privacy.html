@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy — SafeCompress PDF</title>
-<meta name="description" content="SafeCompress PDF privacy policy: files are processed locally in your browser, nothing is collected or uploaded, and the extension requests no permissions.">
+<meta name="description" content="SafeCompress PDF privacy: the extension processes PDFs locally without added tracking; this website uses Yandex Metrika analytics and Webvisor session replay.">
 <link rel="canonical" href="https://safecompress-pdf.github.io/privacy.html">
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/icon48.png">
@@ -25,29 +25,38 @@
 <main id="main" class="container article-shell">
 <article class="article-card">
 <h1>Privacy Policy — SafeCompress PDF</h1>
-<p class="small">Last updated: 2026-08-28</p>
+<!-- [ДОПОЛНЕНИЕ ИИ] Clarify extension-only claims and website analytics. -->
+<p class="small">Last updated: 2026-09-17</p>
 <h2>Overview</h2>
-<p>SafeCompress PDF compresses PDFs locally in your browser. Files are processed on your device and never uploaded.</p>
-<h2>What We Collect</h2>
-<p><strong>Nothing.</strong> No personal data, file content, or analytics collected.</p>
-<h2>How Processing Works</h2>
+<p>The SafeCompress PDF Chrome extension compresses PDFs locally on your device without uploading them. This website is separate from the extension and uses Yandex Metrika analytics, as described below. The local-processing statements in the extension sections do not describe website analytics.</p>
+<h2>Extension Data and Tracking</h2>
+<p>The extension processes PDF content locally and keeps an on-device history log. No analytics or tracking has been added to the extension by this website integration; the Yandex Metrika counter is included only on website pages.</p>
+<h2>How Extension Processing Works</h2>
 <ol>
 <li>File read into browser memory</li>
 <li>Pages rendered locally with bundled pdf.js</li>
 <li>New PDF created with pdf-lib</li>
 <li>Download offered — no file leaves browser</li>
 </ol>
-<p>No network requests during compression (verified: manifest permissions [] and no fetch/XHR in source, checked 2026-08-28).</p>
-<h2>Permissions</h2>
-<p>No Chrome permissions, no host permissions — verifiable in <code>manifest.json</code>: <code>"permissions": []</code>, <code>"host_permissions": []</code>. Cannot access history, tabs, websites, cookies.</p>
-<h2>Local Storage</h2>
-<p>Only <code>localStorage safecompress_log</code> (filename, sizes) and theme preference, on-device only, cleared on uninstall, exportable TXT/CSV, clearable via button.</p>
-<h2>Libraries</h2>
-<p>Bundled locally: pdf.js, pdf-lib — loaded from extension package, not external servers. Exact versions require verification.</p>
-<h2>Offline</h2>
-<p>Works offline after install — libraries bundled, but real-browser offline test pending; claim qualified as “No server upload code found on 2026-08-28”.</p>
+<p>The extension source review dated 2026-08-28 reported no network requests during compression (manifest permissions [] and no fetch/XHR in source). This historical finding concerns the extension, not requests made by this website.</p>
+<h2>Extension Permissions</h2>
+<p>The extension's previously reviewed <code>manifest.json</code> declares <code>"permissions": []</code> and <code>"host_permissions": []</code>: no Chrome or host permissions to access history, tabs, websites or browser cookies. This does not restrict this website's analytics script.</p>
+<h2>Extension Local Storage</h2>
+<p>The extension stores <code>localStorage safecompress_log</code> (filename, sizes) and theme preference on-device only. The log is cleared on uninstall, exportable as TXT/CSV and clearable via a button.</p>
+<h2>Extension Libraries</h2>
+<p>pdf.js and pdf-lib are bundled locally and loaded from the extension package, not external servers. Exact versions require verification.</p>
+<h2>Extension Offline Use</h2>
+<p>The extension's libraries are bundled for offline use after installation, but a real-browser offline test is pending. The historical finding is limited to “No server upload code found on 2026-08-28”.</p>
+<!-- [ДОПОЛНЕНИЕ ИИ] Website analytics section. -->
+<section aria-labelledby="website-analytics">
+<h2 id="website-analytics">Website Analytics — Yandex Metrika</h2>
+<p>This website uses Yandex Metrika counter <code>112760352</code>, a third-party analytics service provided by Yandex. The website loads its script from <code>mc.yandex.ru</code>; this is not local-only data processing.</p>
+<p>The counter enables Webvisor (session interaction recording and replay), click maps, link tracking and accurate bounce metrics to understand website usage. The page URL and referrer are sent to Yandex along with website usage and interaction data. Yandex Metrika may use cookies and browser identifiers.</p>
+<p>These analytics concern visits to this website, not PDF processing inside the extension. If JavaScript is disabled, the supplied counter includes an image request to Yandex. Browser privacy settings or ad blockers may block analytics requests.</p>
+<p>The current integration loads without a consent gate; this policy does not mean that consent has been obtained. Before public deployment, the site owner must determine the applicable consent requirements and implement any required consent gate or disable the relevant tracking.</p>
+</section>
 <h2>Limitations</h2>
-<p>Do not claim 100% secure/private. Security depends on device/browser.</p>
+<p>Neither the extension nor the website is guaranteed to be 100% secure or private. Security also depends on your device and browser.</p>
 <p><a href="index.html">Home</a> · <a href="help.html">Help</a></p>
 </article>
 </main>
@@ -60,5 +69,19 @@
     </div>
   </div>
 </footer>
+<!-- [ДОПОЛНЕНИЕ ИИ] Website analytics integration. -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112760352', 'ym');
+
+    ym(112760352, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112760352" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
