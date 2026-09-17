@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FAQ — SafeCompress PDF</title>
+<meta name="description" content="Answers about SafeCompress PDF: no uploads, local browser processing, why text PDFs may get larger, and known limitations such as encrypted PDFs.">
+<link rel="canonical" href="https://safecompress-pdf.github.io/faq.html">
 <style>body{font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:32px 20px;line-height:1.6} a{color:#2563eb}</style>
 </head>
 <body>
@@ -13,16 +15,19 @@
  "@context": "https://schema.org",
  "@type": "FAQPage",
  "mainEntity": [
-  {"@type":"Question","name":"Is my PDF uploaded?","acceptedAnswer":{"@type":"Answer","text":"No — local browser processing, no uploads, no host permissions."}},
-  {"@type":"Question","name":"Does it collect data?","acceptedAnswer":{"@type":"Answer","text":"No — only localStorage log (filename/sizes) on device."}}
+  {"@type":"Question","name":"Is my PDF uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Your PDF is processed locally in your browser — there are no uploads and the extension has no host permissions."}},
+  {"@type":"Question","name":"Does it collect data?","acceptedAnswer":{"@type":"Answer","text":"No. The only thing stored is an on-device localStorage log with filenames and file sizes; nothing is sent anywhere."}},
+  {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Likely yes: a source review on 2026-08-28 found no server upload code and the PDF libraries are bundled in the extension package. However, a real offline browser test is still pending, so we cannot confirm it with certainty yet."}},
+  {"@type":"Question","name":"Why is my PDF larger after compression?","acceptedAnswer":{"@type":"Answer","text":"Pages are rasterized to JPEG images, and converting a text-heavy or already-optimized PDF to images can add size. The tool works best for scanned or image-heavy PDFs."}},
+  {"@type":"Question","name":"Are encrypted PDFs supported?","acceptedAnswer":{"@type":"Answer","text":"No. Encrypted PDFs are not supported and produce a generic error."}}
  ]
 }
 </script>
-<h3>Is my PDF uploaded?</h3><p>No — local browser processing, no uploads, no host permissions.</p>
-<h3>Does it collect data?</h3><p>No — only localStorage log (filename/sizes) on device.</p>
-<h3>Works offline?</h3><p>Qualified: No server upload code found 2026-08-28, bundled libs — real offline test pending.</p>
-<h3>Why larger?</h3><p>Text PDFs rasterized to images — best for scanned.</p>
-<h3>Encrypted?</h3><p>Not supported — generic error.</p>
+<h2>Is my PDF uploaded?</h2><p>No. Your PDF is processed locally in your browser — there are no uploads and the extension has no host permissions.</p>
+<h2>Does it collect data?</h2><p>No. The only thing stored is an on-device localStorage log with filenames and file sizes; nothing is sent anywhere.</p>
+<h2>Does it work offline?</h2><p>Likely yes: a source review on 2026-08-28 found no server upload code and the PDF libraries are bundled in the extension package. However, a real offline browser test is still pending, so we cannot confirm it with certainty yet.</p>
+<h2>Why is my PDF larger after compression?</h2><p>Pages are rasterized to JPEG images, and converting a text-heavy or already-optimized PDF to images can add size. The tool works best for scanned or image-heavy PDFs.</p>
+<h2>Are encrypted PDFs supported?</h2><p>No. Encrypted PDFs are not supported and produce a generic error.</p>
 <p><a href="index.html">Home</a></p>
 </body>
 </html>
